@@ -3,8 +3,8 @@
 
 :root {
     --primary: #6b2c5a;
-    --foreground: #333333;
-    --foreground-secondary: #666666;
+    --foreground: #666666; 
+    --foreground-secondary: #333333;
 }
 @theme {
     --color-primary: var(--primary);

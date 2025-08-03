@@ -1,0 +1,32 @@
+---
+import { CheckIcon } from "@/icons";
+
+interface Props {
+  title: string;
+  description?: string;
+  items: string[];
+}
+
+const { title, description, items } = Astro.props;
+---
+
+<article class="flex flex-col gap-3 rounded-xl bg-white p-5 shadow-sm">
+  <span class="bg-primary block size-fit rounded-md p-1 text-center text-white">
+    <slot name="icon" />
+  </span>
+
+  <h2 class="text-foreground-secondary font-playfair text-lg font-semibold">
+    {title}
+  </h2>
+  {description && <p class="text-sm">{description}</p>}
+  <ul class="mt-2 flex list-inside list-disc flex-col gap-2 text-sm">
+    {
+      items.map((item) => (
+        <li class="inline-flex items-center gap-2">
+          <CheckIcon class="text-primary size-6" />
+          {item}
+        </li>
+      ))
+    }
+  </ul>
+</article>

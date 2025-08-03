@@ -1,0 +1,42 @@
+---
+import { InfoCard } from "../molecules";
+import { SERVICES } from "@/utils/services";
+---
+
+<section class="flex flex-col gap-28 py-16" id="services">
+  <article class="flex flex-col gap-y-6 self-center text-center">
+    <span class="text-sm font-medium tracking-wide uppercase"
+      >Servicios especializados</span
+    >
+    <h1
+      class="font-playfair text-foreground-secondary text-3xl font-bold tracking-wide text-balance"
+    >
+      Acompañamiento integral para tu proceso
+    </h1>
+    <p class="max-w-xl text-balance">
+      Ofrezco un enfoque personalizado que combina experiencia legal con
+      coaching emocional para ayudarte a navegar situaciones complejas.
+    </p>
+  </article>
+
+  <div
+    class="grid w-full grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-8"
+  >
+    {
+      SERVICES.map((service) => (
+        <InfoCard
+          title={service.title}
+          description={service.description}
+          items={service.items}
+        >
+          <service.icon
+            slot="icon"
+            class="size-6 text-white"
+            aria-hidden="true"
+            focusable="false"
+          />
+        </InfoCard>
+      ))
+    }
+  </div>
+</section>
