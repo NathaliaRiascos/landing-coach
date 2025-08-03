@@ -7,15 +7,14 @@ import { LINKS } from "@/utils/routes";
 <nav
   aria-label="Global"
   class:list={[
-    "fixed inset-0 h-screen w-screen bg-white py-20",
+    "fixed inset-0 z-50 h-dvh w-screen bg-white py-20",
     "md:static md:inset-auto md:flex md:h-auto md:w-auto md:justify-center md:py-0",
-    "",
   ]}
   id="main-menu"
 >
   <button
     id="btn-close"
-    class="absolute top-6 right-2 z-10 shrink-0 cursor-pointer self-end md:hidden"
+    class="absolute top-6 right-4 z-10 shrink-0 cursor-pointer self-end md:hidden"
     aria-label="close sidebar"
     aria-expanded="true"
     aria-controls="main-menu"
@@ -42,7 +41,7 @@ import { LINKS } from "@/utils/routes";
 </nav>
 
 <div class="flex items-center gap-2 justify-self-end">
-  <NavigateBtn>Agendar</NavigateBtn>
+  <NavigateBtn>Agendar consulta</NavigateBtn>
   <button
     id="btn-open"
     class="cursor-pointer md:hidden"
@@ -70,6 +69,7 @@ import { LINKS } from "@/utils/routes";
 <script src="@/scripts/menuToggle.ts"></script>
 
 <style>
+  @reference "@/styles/global.css";
   @keyframes scale-up-hor-right {
     0% {
       transform: scaleX(0);

@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
+
 :root {
     --primary: #6b2c5a;
+    --foreground: #333333;
+    --foreground-secondary: #666666;
 }
 @theme {
     --color-primary: var(--primary);
+    --color-foreground: var(--foreground);
+    --color-foreground-secondary: var(--foreground-secondary);
+
+    --font-lato: "Lato", sans-serif;
+    --font-playfair: 'Playfair Display', serif;
 }
+

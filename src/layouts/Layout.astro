@@ -1,6 +1,7 @@
 ---
 import "@/styles/global.css";
 import "@fontsource/lato";
+import "@fontsource/playfair-display";
 ---
 
 <!doctype html>
@@ -18,6 +19,8 @@ import "@fontsource/lato";
 </html>
 
 <style is:global>
+  @reference "@/styles/global.css";
+
   html,
   body {
     margin: 0;
@@ -27,6 +30,7 @@ import "@fontsource/lato";
 
   body {
     font-family: "Lato", sans-serif;
+    color: var(--foreground);
   }
 
   .btn {

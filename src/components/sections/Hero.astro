@@ -1,0 +1,54 @@
+---
+import Image from "astro/components/Image.astro";
+
+import Coach from "@/assets/coach.webp";
+import { Button } from "../atoms";
+import { Quotation } from "@/icons";
+---
+
+<section
+  class="grid min-h-[calc(100dvh-64px)] w-full grid-cols-1 items-center justify-items-center gap-10 py-16 md:grid-cols-[1fr_auto] md:justify-items-start md:gap-6"
+>
+  <article
+    class="flex max-w-lg flex-col items-center gap-5 text-center text-balance md:items-start md:gap-6 md:text-start"
+  >
+    <span
+      class="text-foreground-secondary text-xs font-medium tracking-wide uppercase sm:text-sm"
+    >
+      Asesoría legal con enfoque humano
+    </span>
+    <h1 class="font-playfair text-4xl leading-tight font-bold md:text-5xl">
+      Toma decisiones difíciles con claridad y confianza.
+    </h1>
+
+    <p class="text-foreground-secondary mb-6 tracking-wide text-balance">
+      Coaching especializado para mujeres que enfrentan procesos legales,
+      personales o laborales importantes.
+    </p>
+    <Button>Agendar consulta</Button>
+  </article>
+  <div class="relative aspect-[371/556]">
+    <Image
+      src={Coach}
+      class="aspect-[371/556] h-auto w-full max-w-[218px] rounded-t-full sm:max-w-[300px] lg:max-w-[371px]"
+      alt="Coach legal sentada en su oficina, sonriendo"
+      aria-hidden="true"
+      loading="eager"
+      width={371}
+      height={556}
+      role="presentation"
+      priority
+    />
+    <blockquote
+      class="absolute -bottom-16 -left-10 z-0 max-w-[230px] rounded-md bg-white p-3 shadow-xl md:-bottom-10 md:-left-1/4"
+    >
+      <span class="inline-block text-gray-300">
+        <Quotation className="h-4 w-4" />
+      </span>
+      <span class="text-foreground-secondary text-sm italic"
+        >No estás sola. Mereces tomar decisiones con serenidad, incluso en medio
+        del caos.</span
+      >
+    </blockquote>
+  </div>
+</section>
