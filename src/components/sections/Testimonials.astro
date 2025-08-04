@@ -1,0 +1,28 @@
+---
+import { TESTIMONIALS } from "@/utils/testimonials";
+import { TestimonyCard } from "../molecules";
+---
+
+<section class="flex flex-col gap-16" id="testimonials">
+  <header class="text-center">
+    <span class="text-sm font-medium tracking-wide uppercase">Testimonios</span>
+    <h1 class="text-foreground-secondary font-playfair mt-2 text-3xl font-bold">
+      Historias de transformación y empoderamiento
+    </h1>
+  </header>
+
+  <div
+    class="grid w-full grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-8"
+  >
+    {
+      TESTIMONIALS.map((testimony) => (
+        <TestimonyCard
+          desc={testimony.desc}
+          service={testimony.service}
+          personName={testimony.personName}
+          imgURL={testimony.imgURL}
+        />
+      ))
+    }
+  </div>
+</section>

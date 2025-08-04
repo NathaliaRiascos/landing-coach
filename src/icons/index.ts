@@ -4,3 +4,4 @@ export { default as ShieldIcon } from "./Shield.astro";
 export { default as UsersIcon } from "./Users.astro";
 export { default as HeartIcon } from "./Heart.astro";
 export { default as CheckIcon } from "./Check.astro";
+export { default as StarIcon } from "./Star.astro";

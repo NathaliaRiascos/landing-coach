@@ -1,0 +1,18 @@
+---
+import { Avatar } from "../atoms";
+
+interface Props {
+  url: string;
+  name: string;
+  desc: string;
+}
+const { url, name, desc } = Astro.props;
+---
+
+<figure class="flex items-center gap-1" aria-label={`Testimonio de ${name}`}>
+  <Avatar url={url} />
+  <figcaption class="flex flex-col">
+    <span class="text-foreground-secondary text-base font-bold">{name}</span>
+    <span class="text-sm">{desc}</span>
+  </figcaption>
+</figure>

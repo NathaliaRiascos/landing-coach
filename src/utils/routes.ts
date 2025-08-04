@@ -6,11 +6,11 @@ export const LINKS: Route[] = [
     label: "Servicios",
   },
   {
-    to: "#",
+    to: "#about-me",
     label: "Sobre mí",
   },
   {
-    to: "#",
+    to: "#testimonials",
     label: "Testimonios",
   },
   {
