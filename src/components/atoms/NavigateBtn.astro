@@ -1,3 +1,16 @@
-<a class="btn btn--primary" href="#">
+---
+interface Props {
+  variant?: "primary" | "secondary";
+}
+
+const { variant = "primary" } = Astro.props;
+
+const classByVariant = {
+  primary: "btn--primary",
+  secondary: "btn--secondary",
+};
+---
+
+<a class:list={["btn", classByVariant[variant]]} href="#">
   <slot />
 </a>
