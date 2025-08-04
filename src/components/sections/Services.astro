@@ -1,9 +1,10 @@
 ---
 import { InfoCard } from "../molecules";
 import { SERVICES } from "@/utils/services";
+import SectionContainer from "./SectionContainer.astro";
 ---
 
-<section class="flex flex-col gap-28" id="services">
+<SectionContainer class="flex flex-col gap-28" id="services">
   <article class="flex flex-col gap-y-6 self-center text-center">
     <span class="text-sm font-medium tracking-wide uppercase"
       >Servicios especializados</span
@@ -39,4 +40,4 @@ import { SERVICES } from "@/utils/services";
       ))
     }
   </div>
-</section>
+</SectionContainer>

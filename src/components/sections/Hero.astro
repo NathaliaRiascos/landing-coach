@@ -4,9 +4,10 @@ import Image from "astro/components/Image.astro";
 import Coach from "@/assets/coach.webp";
 import { Button } from "../atoms";
 import { Quotation } from "@/icons";
+import SectionContainer from "./SectionContainer.astro";
 ---
 
-<section
+<SectionContainer
   class="grid min-h-[calc(100dvh-64px)] w-full grid-cols-1 items-center justify-items-center gap-10 py-16 md:grid-cols-[1fr_auto] md:justify-items-start md:gap-6"
 >
   <article
@@ -51,4 +52,4 @@ import { Quotation } from "@/icons";
       >
     </blockquote>
   </div>
-</section>
+</SectionContainer>

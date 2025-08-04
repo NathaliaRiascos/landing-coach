@@ -1,9 +1,11 @@
 ---
 import { InfoCard, Metrics } from "../molecules";
+import SectionContainer from "./SectionContainer.astro";
 ---
 
-<section
+<SectionContainer
   aria-labelledby="about-title"
+  id="about-me"
   class="grid items-center gap-8 md:grid-cols-[1fr_auto]"
 >
   <article class="flex flex-col gap-8">
@@ -55,4 +57,4 @@ import { InfoCard, Metrics } from "../molecules";
       { title: "Mediadora Familiar", desc: "Centro de Mediación" },
     ]}
   />
-</section>
+</SectionContainer>

@@ -1,9 +1,10 @@
 ---
 import { TESTIMONIALS } from "@/utils/testimonials";
 import { TestimonyCard } from "../molecules";
+import SectionContainer from "./SectionContainer.astro";
 ---
 
-<section class="flex flex-col gap-16" id="testimonials">
+<SectionContainer class="flex flex-col gap-16" id="testimonials">
   <header class="text-center">
     <span class="text-sm font-medium tracking-wide uppercase">Testimonios</span>
     <h1 class="text-foreground-secondary font-playfair mt-2 text-3xl font-bold">
@@ -25,4 +26,4 @@ import { TestimonyCard } from "../molecules";
       ))
     }
   </div>
-</section>
+</SectionContainer>
