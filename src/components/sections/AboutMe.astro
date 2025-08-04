@@ -1,0 +1,58 @@
+---
+import { InfoCard, Metrics } from "../molecules";
+---
+
+<section
+  aria-labelledby="about-title"
+  class="grid items-center gap-8 md:grid-cols-[1fr_auto]"
+>
+  <article class="flex flex-col gap-8">
+    <header>
+      <span class="text-primary text-sm font-medium tracking-wide uppercase"
+        >Sobre mí</span
+      >
+      <h1
+        id="about-title"
+        class="text-foreground-secondary font-playfair mt-2 max-w-lg text-3xl font-bold"
+      >
+        Más de 15 años acompañando mujeres en momentos decisivos
+      </h1>
+    </header>
+
+    <div
+      class="text-foreground flex max-w-3xl flex-col gap-6 text-base text-balance"
+    >
+      <p>
+        Soy abogada especializada en derecho familiar y laboral, con
+        certificación en coaching ontológico. Mi enfoque combina la experiencia
+        legal con herramientas de desarrollo personal.
+      </p>
+      <p>
+        He acompañado a más de 300 mujeres en procesos legales complejos,
+        ayudándolas no solo a resolver sus situaciones jurídicas, sino también a
+        fortalecer su autoestima y confianza.
+      </p>
+      <p>
+        Creo firmemente que cada mujer merece tomar decisiones desde un lugar de
+        claridad y fortaleza, sin importar cuán difícil sea su situación actual.
+      </p>
+    </div>
+    <footer>
+      <Metrics />
+    </footer>
+  </article>
+  <InfoCard
+    title="Formación y Certificaciones"
+    class="h-fit py-6 md:min-w-[421px]"
+    hasIcon={false}
+    items={[
+      { title: "Licenciada en Derecho", desc: "Universidad Nacional" },
+      { title: "Coach Ontológico Certificada", desc: "Instituto de Coaching" },
+      {
+        title: "Especialización en Derecho Familiar",
+        desc: "Colegio de Abogados",
+      },
+      { title: "Mediadora Familiar", desc: "Centro de Mediación" },
+    ]}
+  />
+</section>

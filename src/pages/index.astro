@@ -3,13 +3,14 @@ import Layout from "../layouts/Layout.astro";
 
 import { Header } from "@/components/organisms";
 
-import { Hero, Services } from "@/components/sections";
+import { AboutMe, Hero, Services } from "@/components/sections";
 ---
 
 <Layout>
   <Header />
-  <main class="mx-auto max-w-6xl px-8">
+  <main class="mx-auto flex max-w-6xl flex-col gap-42 px-8">
     <Hero />
     <Services />
+    <AboutMe />
   </main>
 </Layout>
