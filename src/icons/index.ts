@@ -5,3 +5,7 @@ export { default as UsersIcon } from "./Users.astro";
 export { default as HeartIcon } from "./Heart.astro";
 export { default as CheckIcon } from "./Check.astro";
 export { default as StarIcon } from "./Star.astro";
+export { default as MapPinIcon } from "./MapPin.astro";
+export { default as PhoneIcon } from "./Phone.astro";
+export { default as EmailIcon } from "./Email.astro";
+export { default as ArrowIcon } from "./Arrow.astro";

@@ -1,5 +1,6 @@
 ---
 import "@/styles/global.css";
+import "toastify-js/src/toastify.css";
 import "@fontsource/lato";
 import "@fontsource/playfair-display";
 ---
@@ -31,10 +32,11 @@ import "@fontsource/playfair-display";
   body {
     font-family: "Lato", sans-serif;
     color: var(--foreground);
+    background-color: #fafafa;
   }
 
   .btn {
-    @apply size-fit rounded-md px-5 py-2.5 text-sm font-medium shadow-sm;
+    @apply size-fit cursor-pointer rounded-md px-5 py-2.5 text-sm font-medium shadow-sm;
   }
 
   .btn--primary {
@@ -43,5 +45,23 @@ import "@fontsource/playfair-display";
 
   .btn--secondary {
     @apply text-primary bg-white font-bold;
+  }
+
+  .success {
+    background-color: #bbf7d0 !important;
+    color: #16a34a !important;
+
+    & .toast-close {
+      color: #16a34a;
+    }
+  }
+
+  .error {
+    background-color: #fecaca !important;
+    color: #dc2626 !important;
+
+    & .toast-close {
+      color: #dc2626;
+    }
   }
 </style>

@@ -1,0 +1,30 @@
+---
+import { Button, Input, Select, TextArea } from "../atoms";
+
+const servicesOptions = [
+  "Procesos de Divorcio",
+  "Conflictos Laborales",
+  "Coaching Personal",
+];
+---
+
+<div class="w-full rounded-lg bg-white p-7 shadow-sm md:max-w-lg">
+  <h2 class="text-foreground-secondary mb-5 text-xl font-bold">
+    Envíame un mensaje
+  </h2>
+  <form class="flex flex-col gap-5">
+    <Input label="Nombre completo" name="name" required />
+    <Input label="Email" name="email" type="email" required minlength="6" />
+    <Select
+      label="Tipo de consulta"
+      name="service"
+      options={servicesOptions}
+      required
+    />
+    <TextArea label="Mensaje" name="message" minlength="6" required />
+    <Button type="submit" class="!w-full" id="btn-submit">Enviar mensaje</Button
+    >
+  </form>
+</div>
+
+<script src="@/scripts/contact.ts"></script>

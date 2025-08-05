@@ -1,9 +1,16 @@
 ---
-interface Props {
+interface Props extends astroHTML.JSX.ButtonHTMLAttributes {
   variant?: "primary" | "secondary";
+  class?: string;
+  type?: "submit" | "button";
 }
 
-const { variant = "primary" } = Astro.props;
+const {
+  variant = "primary",
+  class: className,
+  type = "button",
+  ...rest
+} = Astro.props;
 
 const classByVariant = {
   primary: "btn--primary",
@@ -11,6 +18,10 @@ const classByVariant = {
 };
 ---
 
-<button class:list={["btn", classByVariant[variant]]}>
+<button
+  class:list={["btn disabled:bg-[#47223d]", classByVariant[variant], className]}
+  type={type}
+  {...rest}
+>
   <slot />
 </button>

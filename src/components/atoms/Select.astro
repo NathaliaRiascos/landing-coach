@@ -1,0 +1,75 @@
+---
+import { ArrowIcon } from "@/icons";
+
+interface Props {
+  label: string;
+  name: string;
+  options?: string[];
+  placeholder?: string;
+  class?: string;
+  required?: boolean;
+}
+
+const {
+  label,
+  name,
+  options = [],
+  placeholder = "Selecciona una opción",
+  class: className,
+  required,
+} = Astro.props;
+---
+
+<div class="relative flex w-full flex-col">
+  {
+    label && (
+      <label for={name} class="mb-1 text-sm font-medium">
+        {label}
+        {required && "*"}
+      </label>
+    )
+  }
+  <div class="group/select relative">
+    <button
+      type="button"
+      id="trigger"
+      data-error-visible="false"
+      class:list={[
+        "placeholder:text-muted-foreground flex h-9 w-full min-w-0 rounded-md border border-gray-500 bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        "focus:border-primary focus:ring-primary/50 cursor-pointer focus:ring-[3px]",
+        "data-[error-visible=true]:border-primary data-[error-visible=true]:ring-primary/50 data-[error-visible=true]:ring-[3px]",
+        "group flex items-center justify-between",
+        className,
+      ]}
+      aria-haspopup="listbox"
+      aria-expanded="false"
+    >
+      <span id="selected-label">{placeholder}</span>
+      <ArrowIcon
+        class="arrow-icon transition-transform duration-300 ease-in-out group-aria-expanded:rotate-180"
+      />
+    </button>
+    <span class="hidden text-sm text-red-600" data-error={name}></span>
+    <input type="hidden" name={name} id="hidden-input" />
+    <ul
+      id="options"
+      role="listbox"
+      class="absolute z-10 mt-1 hidden max-h-60 w-full overflow-auto rounded-md border border-gray-300 bg-white text-sm shadow-lg"
+    >
+      {
+        options.map((option, index) => (
+          <li
+            id={`option-${index}`}
+            role="option"
+            data-value={option}
+            class="hover:bg-primary/80 cursor-pointer px-3 py-2 transition-colors hover:text-white"
+          >
+            {option}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<script src="@/scripts/select.ts"></script>

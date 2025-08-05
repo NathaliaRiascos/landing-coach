@@ -1,0 +1,40 @@
+---
+import { PhoneIcon } from "@/icons";
+
+import ContactMethod from "../molecules/ContactMethod.astro";
+import SectionContainer from "./SectionContainer.astro";
+import { CONTACTMETHODS } from "@/utils/contact-methods";
+import { ContactForm } from "../organisms";
+---
+
+<SectionContainer class="flex flex-col gap-18">
+  <header class="flex flex-col gap-y-4 self-center text-center">
+    <span class="text-sm font-medium tracking-wide uppercase">Contacto</span>
+    <h2
+      class="font-playfair text-foreground-secondary text-3xl font-bold tracking-wide text-balance"
+    >
+      Estoy aquí para acompañarte
+    </h2>
+    <p class="max-w-xl">
+      Contáctame para agendar tu consulta o resolver cualquier duda sobre mis
+      servicios.
+    </p>
+  </header>
+
+  <div class="flex flex-wrap items-center justify-between gap-8">
+    <ul class="flex flex-col gap-7">
+      {
+        CONTACTMETHODS.map((method) => (
+          <ContactMethod
+            label={method.label}
+            value={method.value}
+            desc={method.desc}
+          >
+            <method.icon class="size-6" slot="icon" />
+          </ContactMethod>
+        ))
+      }
+    </ul>
+    <ContactForm />
+  </div>
+</SectionContainer>

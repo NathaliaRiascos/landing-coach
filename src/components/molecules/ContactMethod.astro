@@ -1,0 +1,24 @@
+---
+interface Props {
+  label: string;
+  value: string;
+  desc: string;
+}
+
+const { label, value, desc } = Astro.props;
+---
+
+<li class="flex items-start gap-3" aria-label={label}>
+  <span
+    class="bg-primary block size-8 rounded-md p-1 text-center text-white"
+    aria-hidden="true"
+  >
+    <slot name="icon" />
+  </span>
+  <div>
+    <span class="text-foreground-secondary mb-1 text-lg font-bold">{label}</span
+    >
+    <span class="block text-base">{value}</span>
+    <small class="block text-sm">{desc}</small>
+  </div>
+</li>
