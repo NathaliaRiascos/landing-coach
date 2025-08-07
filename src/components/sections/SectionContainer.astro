@@ -9,6 +9,7 @@ const { class: className, id } = Astro.props;
 
 <section
   class:list={["mx-auto w-full max-w-6xl flex-col px-4 md:px-8", className]}
+  id={id}
 >
   <slot />
 </section>

@@ -14,7 +14,7 @@ export const LINKS: Route[] = [
     label: "Testimonios",
   },
   {
-    to: "#",
+    to: "#contact",
     label: "Contacto",
   },
 ];
