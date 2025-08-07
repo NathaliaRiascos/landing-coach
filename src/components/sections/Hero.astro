@@ -2,7 +2,7 @@
 import Image from "astro/components/Image.astro";
 
 import Coach from "@/assets/coach.webp";
-import { Button } from "../atoms";
+import { NavigateBtn } from "../atoms";
 import { Quotation } from "@/icons";
 import SectionContainer from "./SectionContainer.astro";
 ---
@@ -26,7 +26,9 @@ import SectionContainer from "./SectionContainer.astro";
       Coaching especializado para mujeres que enfrentan procesos legales,
       personales o laborales importantes.
     </p>
-    <Button>Agendar consulta</Button>
+    <NavigateBtn url="https://calendly.com/valkycode/30min" target="_blank"
+      >Agendar consulta</NavigateBtn
+    >
   </article>
   <div class="relative aspect-[371/556]">
     <Image

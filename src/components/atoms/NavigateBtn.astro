@@ -1,9 +1,10 @@
 ---
-interface Props {
+interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
   variant?: "primary" | "secondary";
+  url: string;
 }
 
-const { variant = "primary" } = Astro.props;
+const { variant = "primary", url, ...rest } = Astro.props;
 
 const classByVariant = {
   primary: "btn--primary",
@@ -11,6 +12,11 @@ const classByVariant = {
 };
 ---
 
-<a class:list={["btn", classByVariant[variant]]} href="#">
+<a
+  class:list={["btn", classByVariant[variant]]}
+  href={url}
+  rel="noopener noreferrer"
+  {...rest}
+>
   <slot />
 </a>

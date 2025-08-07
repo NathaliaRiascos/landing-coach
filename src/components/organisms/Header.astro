@@ -1,12 +1,24 @@
 ---
+import Logo from "@/assets/logo.png";
 import { Navbar } from "@/molecules";
+import { Image } from "astro:assets";
 ---
 
 <header class="sticky top-0 z-20 bg-white px-2 py-3 shadow-xl md:px-8">
   <div
     class="mx-auto grid max-w-6xl grid-cols-[auto_1fr_auto] items-center justify-between"
   >
-    <span>LegalCoach</span>
+    <a href="/" class="block">
+      <Image
+        src={Logo}
+        width={40}
+        height={40}
+        alt="logo"
+        loading="eager"
+        alt="Legal coach logo"
+        priority
+      />
+    </a>
     <Navbar />
   </div>
 </header>
