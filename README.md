@@ -1,46 +1,70 @@
-# Astro Starter Kit: Basics
+# 💼 Legal Coach - Landing Page
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Landing page profesional para una **Coach Legal**, diseñada para presentar sus servicios de asesoría legal con enfoque humano y emocional, especialmente dirigida a mujeres que enfrentan procesos difíciles en sus vidas personales, laborales o legales.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Legal Coach Screenshot](./public/preview.webp)
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## ✨ Características principales
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+- Diseño limpio y profesional, centrado en la claridad y empatía.
+- Secciones bien estructuradas: servicios, sobre mí, testimonios, contacto.
+- Formulario funcional para agendar consultas y enviar mensajes.
+- Enfoque responsivo y accesible.
+- Integración con **Resend API** para envío de correos (modo demostración).
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## 📌 Secciones incluidas
 
-All commands are run from the root of the project, from a terminal:
+### 1. **Hero**
+> *"Asesoría legal con enfoque humano. Toma decisiones difíciles con claridad y confianza."*
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+- Llamado a la acción principal: **Agendar consulta**
+- Imagen representativa del servicio
 
-## 👀 Want to learn more?
+### 2. **Servicios**
+- **Procesos de Divorcio**: Acompañamiento estratégico y emocional.
+- **Conflictos Laborales**: Defensa de derechos con coaching y guía legal.
+- **Coaching Personal**: Desarrollo emocional, toma de decisiones, autoestima.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### 3. **Sobre mí**
+- Más de 15 años de experiencia.
+- 300+ mujeres acompañadas.
+- Formación en derecho familiar, laboral y coaching ontológico.
+
+### 4. **Testimonios**
+> Historias reales de transformación y empoderamiento de mujeres que confiaron en el acompañamiento de la Coach Legal.
+
+### 5. **Contacto**
+- Datos de contacto: teléfono, email y ubicación.
+- Formulario de envío de mensaje.
+- Consulta gratuita de 30 minutos (CTA final).
+
+---
+
+## ⚙️ Tecnologías usadas
+
+- **Astro** – Framework web moderno para sitios rápidos y estáticos.
+- **TypeScript** – Tipado estricto para mayor seguridad.
+- **TailwindCSS** – Estilos rápidos y reutilizables.
+- **Zod** – Validación de formularios del lado del servidor.
+- **Resend API** – Envío de correos electrónicos (modo demo con `delivered@resend.dev`).
+
+---
+
+## 🚀 Instalación local
+
+```bash
+# Clona el proyecto
+git clone https://github.com/tuusuario/legal-coach-landing.git
+
+# Entra al proyecto
+cd legal-coach-landing
+
+# Instala dependencias
+pnpm install
+
+# Inicia el servidor de desarrollo
+pnpm run dev
