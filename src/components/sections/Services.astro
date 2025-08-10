@@ -5,15 +5,16 @@ import SectionContainer from "./SectionContainer.astro";
 ---
 
 <SectionContainer class="flex flex-col gap-28" id="services">
+  <h2 class="sr-only">Acompañamiento integral para tu proceso</h2>
   <article class="flex flex-col gap-y-6 self-center text-center">
     <span class="text-sm font-medium tracking-wide uppercase"
       >Servicios especializados</span
     >
-    <h1
+    <h2
       class="font-playfair text-foreground-secondary text-3xl font-bold tracking-wide text-balance"
     >
       Acompañamiento integral para tu proceso
-    </h1>
+    </h2>
     <p class="max-w-xl text-balance">
       Ofrezco un enfoque personalizado que combina experiencia legal con
       coaching emocional para ayudarte a navegar situaciones complejas.
@@ -31,7 +32,6 @@ import SectionContainer from "./SectionContainer.astro";
           items={service.items}
         >
           <service.icon
-            slot="icon"
             class="size-6 text-white"
             aria-hidden="true"
             focusable="false"

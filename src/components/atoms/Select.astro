@@ -23,7 +23,7 @@ const {
 <div class="relative flex w-full flex-col">
   {
     label && (
-      <label for={name} class="mb-1 text-sm font-medium">
+      <label id={`label-${name}`} class="mb-1 text-sm font-medium">
         {label}
         {required && "*"}
       </label>
@@ -33,6 +33,7 @@ const {
     <button
       type="button"
       id="trigger"
+      aria-labelledby={`label-${name}`}
       data-error-visible="false"
       class:list={[
         "placeholder:text-muted-foreground flex h-9 w-full min-w-0 rounded-md border border-gray-500 bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
