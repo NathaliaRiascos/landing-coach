@@ -2,7 +2,7 @@
 
 Landing page profesional para una **Coach Legal**, diseñada para presentar sus servicios de asesoría legal con enfoque humano y emocional, especialmente dirigida a mujeres que enfrentan procesos difíciles en sus vidas personales, laborales o legales.
 
-![Legal Coach Screenshot](./public/preview.webp)
+![Legal Coach Screenshot](./public/preview.png)
 
 ---
 
